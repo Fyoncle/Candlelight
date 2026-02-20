@@ -30,7 +30,7 @@ public class FlowerCrownModel<T extends LivingEntity> extends HumanoidModel<T> {
         PartDefinition root = meshDefinition.getRoot();
 
         PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create()
-                .texOffs(0, 5).addBox(-4.0F, -8.75F, -4.0F, 8.0F, 4.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.75F, 0.0F));
+                .texOffs(0, 5).addBox(-4.0F, -8.75F, -4.0F, 8.0F, 4.0F, 8.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 12.75F, 0.0F));
 
         root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.ZERO);
 

@@ -1,3 +1,13 @@
+[2.1.9]
+
+**Fixed**
+* Fixed a crash that could occur when equipping the Cooking Hat, Necktie, or Rose Crown (thanks to jaoreir)
+
+**Changed**
+* Updated Ru_Ru (thanks to tefnya)
+
+***
+
 [2.1.8]
 
 **Fixed**

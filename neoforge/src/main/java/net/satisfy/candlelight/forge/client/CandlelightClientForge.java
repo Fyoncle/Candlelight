@@ -36,8 +36,8 @@ public class CandlelightClientForge {
 
     @SubscribeEvent
     public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
-        event.registerItem(new CandlelightHatExtensions(), FLOWER_CROWN.get(), COOKING_HAT.get(), NECKTIE.get());
-        event.registerItem(new CandlelightChestplateExtensions(), CHEFS_JACKET.get(), SHIRT.get(), FORMAL_SHIRT.get());
+        event.registerItem(new CandlelightHatExtensions(), FLOWER_CROWN.get(), COOKING_HAT.get());
+        event.registerItem(new CandlelightChestplateExtensions(), CHEFS_JACKET.get(), SHIRT.get(), FORMAL_SHIRT.get(), NECKTIE.get());
         event.registerItem(new CandlelightLeggingsExtensions(), CHEFS_PANTS.get());
         event.registerItem(new CandlelightBootsExtensions(), CHEFS_BOOTS.get());
         event.registerItem(new DyeableCandlelightArmorExtensions(), TROUSERS_AND_VEST.get(), DRESS.get());

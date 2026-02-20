@@ -37,7 +37,7 @@ public class CookingHatModel<T extends LivingEntity> extends HumanoidModel<T> {
         root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.9F, 12.0F, 0.0F));
         root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.9F, 12.0F, 0.0F));
 
-        root.addOrReplaceChild("head", CubeListBuilder.create().texOffs(1, 16).addBox(-4.0F, -9.75F, -4.0F, 8.0F, 5.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(0, 0).addBox(-5.0F, -15.75F, -5.0F, 10.0F, 6.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.75F, 0.0F));
+        root.addOrReplaceChild("head", CubeListBuilder.create().texOffs(1, 16).addBox(-4.0F, -9.75F, -4.0F, 8.0F, 5.0F, 8.0F, new CubeDeformation(0.2F)).texOffs(0, 0).addBox(-5.0F, -15.75F, -5.0F, 10.0F, 6.0F, 10.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 12.75F, 0.0F));
         root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.ZERO);
 
         return LayerDefinition.create(meshDefinition, 48, 48);

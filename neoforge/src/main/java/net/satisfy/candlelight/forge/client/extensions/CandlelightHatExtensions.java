@@ -19,6 +19,8 @@ public class CandlelightHatExtensions implements IClientItemExtensions {
 
         Item item = stack.getItem();
 
+        if (item == ObjectRegistry.NECKTIE.get()) return ArmorRegistry.getHatModel(item, original.body, original);
+
         if (item == ObjectRegistry.FLOWER_CROWN.get()) return ArmorRegistry.getCrownModel(item, original.head, original);
 
         if (item instanceof CandlelightHatItem) return ArmorRegistry.getHatModel(item, original.head, original);
