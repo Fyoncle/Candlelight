@@ -1,3 +1,10 @@
+[2.1.10]
+
+**Changed**
+* Adapted RoseBlock to the updated BonemealableFlowerBlock constructor to prevent a startup crash (thanks to jaoreir)
+
+***
+
 [2.1.9]
 
 **Fixed**
