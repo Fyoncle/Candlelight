@@ -1,3 +1,10 @@
+[2.1.11]
+
+**Fixed**
+* Corrected the item tag from c:strawberry to the proper tag reference
+
+***
+
 [2.1.10]
 
 **Changed**
