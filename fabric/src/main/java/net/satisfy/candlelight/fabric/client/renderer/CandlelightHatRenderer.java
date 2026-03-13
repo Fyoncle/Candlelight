@@ -9,6 +9,8 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.satisfy.candlelight.client.model.CookingHatModel;
+import net.satisfy.candlelight.client.model.FlowerCrownModel;
 import net.satisfy.candlelight.core.item.CandlelightHatItem;
 import net.satisfy.candlelight.core.registry.ArmorRegistry;
 
@@ -19,12 +21,25 @@ public class CandlelightHatRenderer implements ArmorRenderer {
         if (!(stack.getItem() instanceof CandlelightHatItem hat)) return;
 
         Model hatModel = ArmorRegistry.getHatModel(hat, contextModel.head, contextModel);
-        if (hatModel != null) hatModel.renderToBuffer(matrices, vertexConsumers.getBuffer(hatModel.renderType(hat.getHatTexture())), light, OverlayTexture.NO_OVERLAY);
+        if (hatModel instanceof CookingHatModel<?> cookingHatModel) {
+            cookingHatModel.copyHead(contextModel.head);
+            hatModel.renderToBuffer(
+                    matrices,
+                    vertexConsumers.getBuffer(hatModel.renderType(hat.getHatTexture())),
+                    light,
+                    OverlayTexture.NO_OVERLAY
+            );
+        }
 
         Model crownModel = ArmorRegistry.getCrownModel(hat, contextModel.head, contextModel);
-        if (crownModel != null) crownModel.renderToBuffer(matrices, vertexConsumers.getBuffer(crownModel.renderType(hat.getHatTexture())), light, OverlayTexture.NO_OVERLAY);
-
-        Model tieModel = ArmorRegistry.getTieModel(hat, contextModel.head, contextModel.body, contextModel);
-        if (tieModel != null) tieModel.renderToBuffer(matrices, vertexConsumers.getBuffer(tieModel.renderType(hat.getHatTexture())), light, OverlayTexture.NO_OVERLAY);
+        if (crownModel instanceof FlowerCrownModel<?> flowerCrownModel) {
+            flowerCrownModel.copyHead(contextModel.head);
+            crownModel.renderToBuffer(
+                    matrices,
+                    vertexConsumers.getBuffer(crownModel.renderType(hat.getHatTexture())),
+                    light,
+                    OverlayTexture.NO_OVERLAY
+            );
+        }
     }
 }

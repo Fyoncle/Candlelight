@@ -1,3 +1,11 @@
+[2.1.12]
+
+**Fixed**
+* Small Painting crash when placing the block
+* Hat rendering on Fabric causing textures to appear on other body parts
+
+***
+
 [2.1.11]
 
 **Fixed**
